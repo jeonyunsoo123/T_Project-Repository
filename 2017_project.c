@@ -39,7 +39,7 @@ int menu_selection;
     if(menu_selection==4) {administrator_mode();};
     if(menu_selection!=1 || 2 || 3 || 4) {
         clear_page();
-        printf("Error! Invalid Integer input.\n Restarting Program");
+        printf("Error! Invalid Integer input!\n Restarting Program");
         Sleep(3000);
         main_menu();
         }
