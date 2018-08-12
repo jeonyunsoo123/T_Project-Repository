@@ -23,7 +23,7 @@ printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n
 int main_menu(){
 int menu_selection;
     clear_page();
-    printf("|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n");;
+    printf("|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n");
     printf("||                                                                             ||\n");
     printf("||                                                                             ||\n");
     printf("||                     Welcome to Hotel Management Program                     ||\n");
