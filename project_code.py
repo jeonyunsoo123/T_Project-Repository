@@ -1,8 +1,16 @@
 '''
-2018 Busan Gifted Computer Education Center (High school 1st grade) Team Project
+Busan Gifted Education Center 2018 (Highschool 1st) Team Project File
+부산광역시 정보영재교육원 2018년도 고1 정보심화반 팀 프로젝트 파일
 
-Member = Semin Park, Hyunseo Lee, Yunsoo Jeon
-Date = 2018. 08. 15.
+
+# 프로젝트 정보
+프로젝트 이름 : 교내 분실물 관리 프로그램
+프로젝트 참여자 : 박세민, 이현서, ☆전윤수☆
+
+# 라이선스 규정
+이 프로그램은 GPLv3 라이선스에 의해 보호받는 프로그램이며,
+동의없는 2차 가공, 상업적 사용을 포함한 GPLv3 라이선스를 위반할경우
+법적 처벌을 받을 수 있습니다.
 '''
 
 # Import
@@ -58,6 +66,10 @@ def export_to_file():
     file_category = open("list_category.txt",'w')
     file_date = open("list_date.txt",'w')
     file_feature = open("list_feature.txt",'w')
+        file_num.close()
+        file_date.close()
+        file_feature.close()
+        file_category.close()
 
     file_num.write("\n".join(list_num))
     file_category.write("\n".join(list_category))
@@ -83,7 +95,7 @@ def data_integrity_check():
 
 if data_integrity_check() == 1:
     print("=" * 70)
-    print("   2018 부산정보영재교육원 고1 정보심화반 팀 프로젝트 | 오류 > 무결성 검증 통과 실패  Input File을 확인해주세요")
+    print("   2018 부산정보영재교육원 고1 정보심화반 팀 프로젝트 | 데이터 무결성 검증 > 실패 : Input File을 확인해주세요")
     print("=" * 70)
     print("\n")
     print("   프로그램을 실행하는데 필요한 데이터가 손상되었습니다.\n   프로그램이 5초 뒤 종료됩니다.")
@@ -91,7 +103,7 @@ if data_integrity_check() == 1:
     exit()
 else:
     print("=" * 70)
-    print("   2018 부산정보영재교육원 고1 정보심화반 팀 프로젝트 | 무결성 검증 완료")
+    print("   2018 부산정보영재교육원 고1 정보심화반 팀 프로젝트 | 데이터 무결성 검증 > 완료")
     print("=" * 70)
     print("\n")
     print("   프로그램을 실행하는데 필요한 데이터의 검증에 성공하였습니다.\n   프로그램이 5초 뒤 실행됩니다.")
@@ -122,7 +134,7 @@ else:
                 if(list_category[i].strip() == search_menu):
                     menu_index.append(i)
             for i in menu_index:
-                print("일렬번호 : %4d   종류 : %s         날짜 : %d        특징 : %s" % (int(list_num[i]), list_category[i].strip(), int(list_date[i]), list_feature[i].strip() ))
+                print("일련번호 : %4d   종류 : %s         날짜 : %d        특징 : %s" % (int(list_num[i]), list_category[i].strip(), int(list_date[i]), list_feature[i].strip() ))
             enter_delay()
 
 
